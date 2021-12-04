@@ -19,6 +19,7 @@
     ]
   },
   "scripts": {
+    "postinstall": "husky install",
     "clean": "rimraf dist",
     "typecheck": "tsc",
     "test": "jest --runInBand",
