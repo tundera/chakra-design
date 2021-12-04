@@ -3,6 +3,7 @@ import {
   ChakraProvider,
   extendTheme,
   Flex,
+  Box,
   IconButton,
   useColorMode,
   useColorModeValue,
@@ -32,7 +33,7 @@ const ColorModeToggleBar = () => {
   const nextMode = useColorModeValue('dark', 'light')
 
   return (
-    <Flex justify="flex-end" mb={4}>
+    <Flex justify="flex-end" mb={4} top="0" position="sticky" zIndex="9999">
       <IconButton
         size="md"
         fontSize="lg"
@@ -57,10 +58,10 @@ const withChakra = (StoryFn: Function, context: StoryContext) => {
 
   return (
     <ChakraProvider theme={extendTheme({ direction: dir })}>
-      <div dir={dir} id="story-wrapper" style={{ minHeight: '100vh' }}>
+      <Box dir={dir} id="story-wrapper" w="full">
         <ColorModeToggleBar />
         <StoryFn />
-      </div>
+      </Box>
     </ChakraProvider>
   )
 }
