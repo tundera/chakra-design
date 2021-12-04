@@ -1,0 +1,8 @@
+---
+inject: true
+to: <%= h.prependComponentsPath('index.ts') %>
+append: true
+skip_if: export * from './<%= h.pascalize(name) %>'
+---
+<% pascalizedName = h.pascalize(name) -%>
+export * from './<%= pascalizedName %>/<%= pascalizedName %>'

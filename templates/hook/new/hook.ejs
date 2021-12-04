@@ -1,0 +1,19 @@
+---
+to: <%= h.createHookPath(`use${h.pascalize(name)}.ts`) %>
+---
+<% pascalizedName = h.pascalize(name) -%>
+import { useEffect, useState } from 'react'
+
+type Use<%= pascalizedName %>Options = {
+  /* Include any options here */
+}
+
+export async function use<%= pascalizedName %>(options: Use<%= pascalizedName %>Options) => {
+  const [value, setValue] = useState<string>()
+
+  useEffect(() => {
+    /* Do something here */
+  }, [])
+
+  return { value }
+}

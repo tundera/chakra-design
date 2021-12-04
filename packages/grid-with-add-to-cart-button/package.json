@@ -1,0 +1,84 @@
+{
+  "name": "@chakra-design/grid-with-add-to-cart-button",
+  "version": "0.1.0",
+  "license": "MIT",
+  "homepage": "https://github.com/tundera/chakra-library",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tundera/monorepo",
+    "directory": "packages/grid-with-add-to-cart-button"
+  },
+  "author": {
+    "name": "Philip Johnston",
+    "url": "https://github.com/tundera",
+    "email": "tunderadev@gmail.com"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./*": {
+      "require": "./dist/*.js",
+      "import": "./dist/*.mjs"
+    }
+  },
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vite build",
+    "watch": "vite build --watch"
+  },
+  "devDependencies": {
+    "@chakra-ui/icons": "1.1.1",
+    "@chakra-ui/react": "1.7.2",
+    "@emotion/react": "11.7.0",
+    "@emotion/styled": "11.6.0",
+    "@hookform/resolvers": "2.8.3",
+    "@types/node": "16.11.11",
+    "@types/react": "17.0.37",
+    "@types/react-dom": "17.0.11",
+    "cloudinary-build-url": "0.2.1",
+    "framer-motion": "5.3.3",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-hook-form": "7.20.5",
+    "react-icons": "4.3.1",
+    "typescript": "4.5.2",
+    "zod": "3.11.6"
+  },
+  "peerDependencies": {
+    "@chakra-ui/icons": "*",
+    "@chakra-ui/react": "*",
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "@hookform/resolvers": "*",
+    "cloudinary-build-url": "*",
+    "framer-motion": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-hook-form": "*",
+    "react-icons": "*",
+    "zod": "*"
+  },
+  "peerDependenciesMeta": {
+    "@chakra-ui/icons": {
+      "optional": true
+    },
+    "cloudinary-build-url": {
+      "optional": true
+    },
+    "react-icons": {
+      "optional": true
+    }
+  },
+  "sideEffects": false
+}

@@ -1,0 +1,17 @@
+---
+to: <%= h.prependComponentsPath(`${h.pascalize(name)}/${h.pascalize(name)}.stories.tsx`) %>
+---
+<% pascalizedName = h.pascalize(name) -%>
+import type { ComponentStoryObj, Meta } from '@storybook/react'
+
+import { <%= pascalizedName %> } from './<%= pascalizedName %>'
+
+export default {
+  component: <%= pascalizedName %>,
+} as Meta
+
+export const Default: ComponentStoryObj<typeof <%= pascalizedName %>> = {
+  args: {
+    children: '<%= pascalizedName %> Component',
+  },
+}

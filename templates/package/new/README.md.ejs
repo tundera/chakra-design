@@ -1,0 +1,8 @@
+---
+to: <%= h.prependPackagePath(name, 'README.md') %>
+---
+<% capitalizedName = h.capitalize(name) -%>
+<% dashedName = h.dasherize(name) -%>
+# <%= capitalizedName %>
+
+Based on free Chakra UI Pro component [found here](https://pro.chakra-ui.com/components/free#<%= dashedName %>).

@@ -1,0 +1,5 @@
+---
+to: <%= h.prependHooksPath(`${h.pascalize(name)}/index.ts`) %>
+---
+<% pascalizedName = h.pascalize(name) -%>
+export * from './use<%= pascalizedName %>/'

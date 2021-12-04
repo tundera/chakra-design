@@ -1,0 +1,8 @@
+---
+inject: true
+to: <%= h.prependHooksPath('index.ts') %>
+append: true
+skip_if: export * from './use<%= h.pascalize(name) %>'
+---
+<% pascalizedName = h.pascalize(name) -%>
+export * from './use<%= pascalizedName %>'

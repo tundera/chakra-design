@@ -1,0 +1,5 @@
+---
+to: <%= h.prependPackagePath(name, 'src/index.ts') %>
+---
+<% pascalizedName = h.pascalize(name) -%>
+export * from './<%= pascalizedName %>'

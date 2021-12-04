@@ -1,0 +1,29 @@
+---
+to: '<%= h.prependPackagePath(name, `src/${h.pascalize(name)}.tsx`) %>'
+---
+<% pascalizedName = h.pascalize(name) -%>
+import type { ReactNode } from 'react'
+
+import { useColorModeValue, Flex } from '@chakra-ui/react'
+
+export type <%= pascalizedName %>Props = {
+  children: ReactNode
+}
+
+export const <%= pascalizedName %> = ({ children }: <%= pascalizedName %>Props) => {
+  const bg = useColorModeValue('gray.800', 'white')
+  const color = useColorModeValue('white', 'gray.800')
+
+  return (
+    <Flex
+      direction="column"
+      justifyContent="center"
+      alignItems="center"
+      color={color}
+      bg={bg}
+      w="full"
+    >
+      {children}
+    </Flex>
+  )
+}

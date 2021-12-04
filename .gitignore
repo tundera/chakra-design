@@ -1,0 +1,26 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# build
+**/dist
+**/build
+**/.ultra.cache.json
+
+# dependencies
+node_modules
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
+# testing
+/coverage
+
+# misc
+.DS_Store
+*.pem
+
+# Storybook
+storybook-static

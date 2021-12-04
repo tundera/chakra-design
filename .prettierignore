@@ -1,0 +1,6 @@
+.yarn
+**/build/**
+**/dist/**
+**/tmp/**
+templates
+storybook-static

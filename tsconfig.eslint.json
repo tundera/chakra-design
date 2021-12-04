@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "types": ["node"],
+    "noEmit": true,
+    "allowJs": true
+  },
+  "include": [
+    "**/*.js",
+    "**/*.cjs",
+    "**/*.mjs",
+    "types",
+    ".*rc.cjs",
+    "*.config.js",
+    "*.config.cjs",
+    "jest.config.ts"
+  ]
+}
