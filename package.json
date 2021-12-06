@@ -15,13 +15,13 @@
     "packages": [
       "examples/*",
       "packages/*",
-      "internal/*"
+      "internal/*",
+      "website"
     ]
   },
   "scripts": {
     "postinstall": "husky install",
     "clean": "rimraf dist",
-    "typecheck": "tsc",
     "lint": "eslint --ext .ts,.tsx,.js,.jsx .",
     "test": "NODE_ENV='test' jest --runInBand",
     "test:watch": "NODE_ENV='test' jest --runInBand --watch",
@@ -31,6 +31,9 @@
     "watch:internal": "ultra -r --silent --filter 'internal/*' watch",
     "watch:packages": "ultra -r --silent --filter 'packages/*' watch",
     "watch": "yarn watch:internal && yarn watch:packages",
+    "typecheck:internal": "ultra -r --silent --filter 'internal/*' build",
+    "typecheck:packages": "ultra -r --silent --filter 'packages/*' build",
+    "typecheck": "yarn typecheck:internal && yarn typecheck:packages",
     "storybook": "start-storybook -p 6006",
     "commit": "cz",
     "release": "release-it",

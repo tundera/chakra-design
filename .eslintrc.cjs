@@ -9,10 +9,11 @@ module.exports = {
   },
   extends: [
     'plugin:@typescript-eslint/recommended',
+    'plugin:@next/next/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
-    'plugin:prettier/recommended',
     'plugin:storybook/recommended',
+    'plugin:prettier/recommended',
   ],
   plugins: ['import', 'testing-library'],
   parser: '@typescript-eslint/parser',
@@ -52,6 +53,9 @@ module.exports = {
     },
     react: {
       version: 'detect',
+    },
+    next: {
+      rootDir: 'website',
     },
   },
   overrides: [
