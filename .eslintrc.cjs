@@ -12,7 +12,6 @@ module.exports = {
     'plugin:@next/next/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
-    'plugin:storybook/recommended',
     'plugin:prettier/recommended',
   ],
   plugins: ['import', 'testing-library'],
@@ -93,6 +92,10 @@ module.exports = {
           },
         },
       },
+    },
+    {
+      files: ['**/*.stories.ts', '**/*.stories.tsx', '**/__stories__/**'],
+      extends: ['plugin:storybook/recommended', 'plugin:prettier/recommended'],
     },
     {
       files: ['scripts/**/*'],

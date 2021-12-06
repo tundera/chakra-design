@@ -35,10 +35,7 @@
     "access": "public"
   },
   "scripts": {
-    "postinstall": "chakra-cli tokens src/theme",
-    "prepublishOnly": "pinst --disable",
-    "postpublish": "pinst --enable",
-    "build": "vite build",
+    "build": "chakra-cli tokens src/theme && vite build",
     "watch": "vite build --watch",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
@@ -56,12 +53,12 @@
     "@vitejs/plugin-react": "1.1.0",
     "cloudinary-build-url": "0.2.1",
     "framer-motion": "5.3.3",
-    "pinst": "2.1.6",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-hook-form": "7.20.5",
     "react-icons": "4.3.1",
     "react-test-renderer": "17.0.2",
+    "rimraf": "3.0.2",
     "unplugin-swc": "1.1.1",
     "vite": "2.6.14",
     "vite-plugin-dts": "0.9.6",

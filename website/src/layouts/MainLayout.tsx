@@ -1,10 +1,9 @@
 import type { FC } from 'react'
 import type { GetLayoutFunction } from 'types'
 
-import { Suspense } from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
-import { Flex, Box, Button, Heading, Center, Spinner } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react'
 
 import Header from 'src/components/Header'
 import Container from 'src/components/Container'

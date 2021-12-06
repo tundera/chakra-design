@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "clean",
+      "problemMatcher": [],
+      "label": "npm: clean",
+      "detail": "./scripts/clean.ts"
+    },
+    {
+      "type": "npm",
+      "script": "build",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "npm: build",
+      "detail": "./scripts/build.ts"
+    },
+    {
+      "type": "npm",
+      "script": "test",
+      "group": "test",
+      "problemMatcher": [],
+      "label": "npm: test",
+      "detail": "NODE_ENV='test' jest --runInBand"
+    },
+    {
+      "type": "npm",
+      "script": "test:watch",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "npm: test:watch",
+      "detail": "NODE_ENV='test' jest --runInBand --watch"
+    }
+  ]
+}

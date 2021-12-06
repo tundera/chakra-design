@@ -21,13 +21,12 @@
   },
   "scripts": {
     "postinstall": "husky install",
-    "clean": "rimraf dist",
+    "clean": "./scripts/clean.ts",
+    "reinstall": "./scripts/clean.ts --reinstall",
+    "build": "./scripts/build.ts",
     "lint": "eslint --ext .ts,.tsx,.js,.jsx .",
     "test": "NODE_ENV='test' jest --runInBand",
     "test:watch": "NODE_ENV='test' jest --runInBand --watch",
-    "build:internal": "ultra -r --silent --filter 'internal/*' build",
-    "build:packages": "ultra -r --silent --filter 'packages/*' build",
-    "build": "yarn build:internal && yarn build:packages",
     "watch:internal": "ultra -r --silent --filter 'internal/*' watch",
     "watch:packages": "ultra -r --silent --filter 'packages/*' watch",
     "watch": "yarn watch:internal && yarn watch:packages",
@@ -38,8 +37,7 @@
     "commit": "cz",
     "release": "release-it",
     "build-storybook": "build-storybook",
-    "generate:component": "hygen component new",
-    "generate:hook": "hygen hook new"
+    "generate:package": "hygen package new"
   },
   "devDependencies": {
     "@chakra-ui/icons": "1.1.1",
@@ -108,6 +106,7 @@
     "ts-jest": "27.1.0",
     "ts-node": "10.4.0",
     "tsconfig-paths": "3.12.0",
+    "tsm": "2.2.1",
     "typescript": "4.5.2",
     "ultra-runner": "3.10.5",
     "zod": "3.11.6"
