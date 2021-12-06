@@ -27,6 +27,7 @@ type ProductCardProps = {
 export const ProductCard = (props: ProductCardProps) => {
   const { product, rootProps } = props
   const { name, imageUrl, price, salePrice, rating } = product
+
   return (
     <Stack spacing={useBreakpointValue({ base: '4', md: '5' })} {...rootProps}>
       <Box position="relative">

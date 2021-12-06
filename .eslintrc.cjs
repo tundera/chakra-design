@@ -74,7 +74,7 @@ module.exports = {
       ],
       parserOptions: {
         tsconfigRootDir: __dirname,
-        project: ['tsconfig.eslint.json', 'tsconfig.test.json'],
+        project: ['tsconfig.eslint.json', 'packages/*/tsconfig.test.json'],
       },
       rules: {
         '@typescript-eslint/no-empty-function': 'off',
@@ -85,7 +85,7 @@ module.exports = {
         'import/resolver': {
           typescript: {
             alwaysTryTypes: true,
-            project: ['tsconfig.eslint.json', 'tsconfig.test.json'],
+            project: ['tsconfig.eslint.json', 'packages/*/tsconfig.test.json'],
           },
         },
       },

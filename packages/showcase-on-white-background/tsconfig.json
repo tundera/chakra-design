@@ -6,7 +6,8 @@
     "declaration": true,
     "declarationDir": "dist",
     "emitDeclarationOnly": true,
-    "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo"
+    "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo",
+    "baseUrl": "."
   },
-  "include": ["src"]
+  "include": ["**/*.ts", "**/*.tsx"]
 }

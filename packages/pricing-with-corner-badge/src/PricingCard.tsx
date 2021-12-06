@@ -1,3 +1,5 @@
+import type { PricingCardData } from 'types'
+
 import {
   Flex,
   Heading,
@@ -12,12 +14,6 @@ import {
 import { HiCheckCircle } from 'react-icons/hi'
 
 import { Card, CardProps } from './Card'
-
-export interface PricingCardData {
-  features: string[]
-  name: string
-  price: string
-}
 
 interface PricingCardProps extends CardProps {
   data: PricingCardData

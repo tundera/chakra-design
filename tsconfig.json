@@ -14,10 +14,7 @@
     "allowSyntheticDefaultImports": true,
     "typeRoots": ["node_modules/@types", "types"],
     "incremental": true,
-    "baseUrl": ".",
-    "paths": {
-      "test-utils": ["./test/utils"]
-    }
+    "baseUrl": "."
   },
   "include": ["**/*.ts", "**/*.tsx"]
 }

@@ -1,3 +1,5 @@
+import type { PricingCardData } from 'types'
+
 import { Box, SimpleGrid, useColorModeValue } from '@chakra-ui/react'
 import { SiHive, SiMarketo, SiMicrosoft } from 'react-icons/si'
 
@@ -5,10 +7,12 @@ import { ActionButton } from './ActionButton'
 import { PricingCard } from './PricingCard'
 
 export type PricingWithCornerBadgeProps = {
-  // children: ReactNode
+  cardsData: PricingCardData[]
 }
 
-export const PricingWithCornerBadge = ({}: PricingWithCornerBadgeProps) => {
+export const PricingWithCornerBadge = ({
+  cardsData,
+}: PricingWithCornerBadgeProps) => {
   return (
     <Box
       as="section"
@@ -25,16 +29,7 @@ export const PricingWithCornerBadge = ({}: PricingWithCornerBadgeProps) => {
         alignItems="center"
       >
         <PricingCard
-          data={{
-            price: '$29',
-            name: 'Application UI',
-            features: [
-              'All application UI components',
-              'Lifetime access',
-              'Use on unlimited projects',
-              'Free Updates',
-            ],
-          }}
+          data={cardsData[0]}
           icon={SiMicrosoft}
           button={
             <ActionButton variant="outline" borderWidth="2px">
@@ -46,31 +41,12 @@ export const PricingWithCornerBadge = ({}: PricingWithCornerBadgeProps) => {
           zIndex={1}
           isPopular
           transform={{ lg: 'scale(1.05)' }}
-          data={{
-            price: '$49',
-            name: 'Bundle',
-            features: [
-              'All application UI components',
-              'Lifetime access',
-              'Use on unlimited projects',
-              'Use on unlimited projects',
-              'Free Updates',
-            ],
-          }}
+          data={cardsData[1]}
           icon={SiHive}
           button={<ActionButton>Buy now</ActionButton>}
         />
         <PricingCard
-          data={{
-            price: '$29',
-            name: 'Marketing UI',
-            features: [
-              'All application UI components',
-              'Lifetime access',
-              'Use on unlimited projects',
-              'Free Updates',
-            ],
-          }}
+          data={cardsData[2]}
           icon={SiMarketo}
           button={
             <ActionButton variant="outline" borderWidth="2px">
