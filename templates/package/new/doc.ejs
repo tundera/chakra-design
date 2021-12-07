@@ -1,0 +1,12 @@
+---
+to: '<%= h.prependPackagePath(name, `doc/${h.pascalize(name)}.mdx`) %>'
+---
+<% capitalizedName = h.capitalize(name) -%>
+<% dashedName = h.dasherize(name) -%>
+---
+title: <%= capitalizedName %>
+kind:
+slug: <%= dashedName %>
+---
+
+# <%= capitalizedName %>

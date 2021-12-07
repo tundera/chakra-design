@@ -1,11 +1,11 @@
 ---
-to: '<%= h.prependPackagePath(name, `__tests__/${h.pascalize(name)}.test.tsx`) %>'
+to: '<%= h.prependPackagePath(name, `test/${h.pascalize(name)}.test.tsx`) %>'
 ---
 <% component = h.pascalize(name) -%>
 import { composeStories } from '@storybook/testing-react'
 import { render, screen } from '@chakra-design/test-utils'
 
-import * as stories from '../__stories__/<%= component %>.stories'
+import * as stories from 'stories/<%= component %>.stories'
 
 const { Default } = composeStories(stories)
 
