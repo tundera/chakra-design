@@ -129,6 +129,9 @@
     "jest-axe": "*",
     "react-test-renderer": "*"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "gacp": {
     "add": true,
     "push": true,
