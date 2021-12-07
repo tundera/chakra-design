@@ -1,4 +1,4 @@
-#!/usr/bin/env node -r tsm -r tsconfig-paths/register
+#!/usr/bin/env node
 
 import task from 'tasuku'
 import { execa } from 'execa'

@@ -21,9 +21,9 @@
   },
   "scripts": {
     "postinstall": "husky install",
-    "clean": "./scripts/clean.ts",
-    "reinstall": "./scripts/clean.ts --reinstall",
-    "build": "./scripts/build.ts",
+    "clean": "node -r tsm -r tsconfig-paths/register ./scripts/clean.ts",
+    "reinstall": "node -r tsm -r tsconfig-paths/register ./scripts/clean.ts --reinstall",
+    "build": "node -r tsm -r tsconfig-paths/register ./scripts/build.ts",
     "lint": "eslint --ext .ts,.tsx,.js,.jsx .",
     "test": "NODE_ENV='test' jest --runInBand",
     "test:watch": "NODE_ENV='test' jest --runInBand --watch",
