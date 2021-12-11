@@ -1,6 +1,6 @@
 {
   "name": "chakra-design",
-  "description": "A collection of Chakra UI's free Pro components as a starting point for a React component library",
+  "description": "A collection of Chakra UI's free Pro components as a starting point for a design system",
   "homepage": "https://github.com/tundera/chakra-library",
   "repository": {
     "type": "git",
