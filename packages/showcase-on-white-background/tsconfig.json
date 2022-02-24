@@ -9,5 +9,5 @@
     "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo",
     "baseUrl": "."
   },
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "**/*.tsx", ".contentlayer/generated"]
 }

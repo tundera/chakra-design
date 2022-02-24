@@ -18,13 +18,13 @@ const MainLayout: FC<Props> = ({ title, children }) => {
     <>
       <Head>
         <title>{title ? `Chakra Design | ${title}` : 'Chakra Design'}</title>
-        <meta charSet="utf-8" />
-        <meta name="description" content="Chakra Design documentation" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link rel="icon" href="/favicons/favicon.ico" />
+        <meta charSet='utf-8' />
+        <meta name='description' content='Chakra Design documentation' />
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+        <link rel='icon' href='/favicons/favicon.ico' />
       </Head>
 
-      <Flex minH="100vh" width="100vw" direction="column">
+      <Flex minH='100vh' width='100vw' direction='column'>
         <Header />
         <Container>{children}</Container>
         <Footer />

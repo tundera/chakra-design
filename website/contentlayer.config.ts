@@ -1,8 +1,4 @@
-import {
-  ComputedFields,
-  defineDocumentType,
-  makeSource,
-} from 'contentlayer/source-files'
+import { ComputedFields, defineDocumentType, makeSource } from 'contentlayer/source-files'
 
 import remarkGfm from 'remark-gfm'
 import rehypeSlug from 'rehype-slug'
@@ -19,9 +15,7 @@ const computedFields: ComputedFields = {
     type: 'json',
     resolve: (doc) => {
       const tweetMatches = doc.body.raw.match(/<StaticTweet\sid="[0-9]+"\s\/>/g)
-      const tweetIDs = tweetMatches?.map(
-        (tweet: any) => tweet.match(/[0-9]+/g)[0]
-      )
+      const tweetIDs = tweetMatches?.map((tweet: any) => tweet.match(/[0-9]+/g)[0])
       return tweetIDs ?? []
     },
   },
