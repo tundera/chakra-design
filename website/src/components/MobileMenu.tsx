@@ -23,8 +23,8 @@ const links = [
     url: '/',
   },
   {
-    text: 'Demo',
-    url: '/locations',
+    text: 'Docs',
+    url: '/components',
   },
 ]
 

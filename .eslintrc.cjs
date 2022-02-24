@@ -42,7 +42,7 @@ module.exports = {
   },
   settings: {
     'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
+      '@typescript-eslint/parser': ['.ts', '.tsx', '.mts', '.cts'],
     },
     'import/resolver': {
       typescript: {

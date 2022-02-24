@@ -3,10 +3,11 @@
 # build
 **/dist
 **/build
-**/.ultra.cache.json
+**/.next
+**/.docusaurus
 
 # dependencies
-node_modules
+**/node_modules
 .yarn/*
 !.yarn/patches
 !.yarn/releases
@@ -27,3 +28,4 @@ storybook-static
 
 # Contentlayer
 .contentlayer
+.turbo

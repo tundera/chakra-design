@@ -30,8 +30,8 @@ const Header = () => {
       url: '/',
     },
     {
-      text: 'Demo',
-      url: '/locations',
+      text: 'Docs',
+      url: '/components',
     },
   ]
 

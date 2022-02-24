@@ -8,25 +8,11 @@ type CleanOptions = {
 }
 
 const removeBuildFiles = async () => {
-  await execa('yarn', [
-    'workspaces',
-    'foreach',
-    '-ptv',
-    'dlx',
-    'rimraf',
-    'dist',
-  ])
+  await execa('yarn', ['workspaces', 'foreach', '-ptv', 'dlx', 'rimraf', 'dist', '.turbo'])
 }
 
 const removeDependencies = async () => {
-  await execa('yarn', [
-    'workspaces',
-    'foreach',
-    '-ptv',
-    'dlx',
-    'rimraf',
-    'node_modules',
-  ])
+  await execa('yarn', ['workspaces', 'foreach', '-ptv', 'dlx', 'rimraf', 'node_modules'])
 }
 
 const installDependencies = async () => {

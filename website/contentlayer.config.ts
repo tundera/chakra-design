@@ -33,7 +33,7 @@ const computedFields: ComputedFields = {
 
 const ComponentDoc = defineDocumentType(() => ({
   name: 'Doc',
-  filePathPattern: '**/doc/*.mdx',
+  filePathPattern: '**/*.mdx',
   bodyType: 'mdx',
   fields: {
     title: { type: 'string', required: true },
@@ -54,19 +54,9 @@ const ComponentDoc = defineDocumentType(() => ({
 //   computedFields,
 // }))
 
-const OtherPage = defineDocumentType(() => ({
-  name: 'OtherPage',
-  filePathPattern: '*.mdx',
-  bodyType: 'mdx',
-  fields: {
-    title: { type: 'string', required: true },
-  },
-  computedFields,
-}))
-
 const contentLayerConfig = makeSource({
   contentDirPath: '../packages',
-  documentTypes: [ComponentDoc, OtherPage],
+  documentTypes: [ComponentDoc],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [

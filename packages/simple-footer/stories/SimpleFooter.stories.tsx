@@ -7,8 +7,4 @@ export default {
   component: SimpleFooter,
 } as Meta
 
-export const Default: ComponentStoryObj<typeof SimpleFooter> = {
-  args: {
-    children: 'SimpleFooter Component',
-  },
-}
+export const Default: ComponentStoryObj<typeof SimpleFooter> = {}
